@@ -1,0 +1,134 @@
+:root{
+    /* BACKGROUNDS COLORS */
+    --background-color-primary: rgb(255, 255, 255);
+    --background-color-secondary: rgb(217, 217, 217);
+    --background-color-secondary-transparent:  rgba(217, 217, 217, 0.445);
+    --background-color-tertiary: rgb(114, 114, 114);
+
+    /* BUTTONS COLORS */
+    --button-background-color: rgb(220, 0, 51);
+    --button-font-color: rgb(255, 255, 255);
+    --button-font-hover-color: rgb(255, 255, 255);
+    --button-hover-color: rgb(162, 0, 38);
+    --button-active-background-color: rgb(155, 0, 36);
+
+    /* FONT COLORS */
+    --font-primary-color: rgb(0, 0, 0);
+    --font-secondary-color: rgb(120, 118, 118);
+    --font-tertiary-color: rgb(255, 255, 255);
+    --font-page-color: rgb(220, 0, 51);
+    --font-page-color-hover: rgb(173, 1, 41);
+    --font-price-color: rgb(0, 0, 0);
+
+    /* ICONS COLORS */
+    --icon-primary-color: rgb(0, 0, 0);
+    --icon-primary-color-hover: rgb(123, 123, 123);
+
+
+    /* PRIMARY COLORS */
+    --primary-color: rgb(220, 0, 51);
+    --primary-color-transparent: rgba(220, 0, 51, 0.829);
+    --primary-color-hover: rgb(173, 1, 41);
+
+    /* SECONDARY COLORS */
+    --secondary-color: rgb(171, 171, 171);
+
+    /* Tertiary color */
+    --tertiary-color: rgb(0, 0, 0);
+
+    /* LOADER COLORS */
+    --loader-color-1: rgb(220, 0, 51);
+    --loader-color-2: rgb(147, 64, 84);
+    --loader-color-3: rgb(159, 137, 142);
+
+    /* STATUS COLORS */
+    --success-color: rgb(102, 153, 0);
+    --danger-color: rgb(222, 1, 1);
+}
+
+/* RESET */
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+/* GENERAL */
+html{
+    font-size: 16px;
+}
+
+html , body{
+    font-family: "Roboto" , sans-serif !important;
+}
+
+body{
+    min-width: 100%;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    color: var(--font-primary-color);
+}
+
+/* BACKGROUNDS */
+
+.bg-color-primary{
+    background-color: var(--background-color-primary);
+}
+
+
+/* BUTTONS */
+.button-color-primary{
+    background-color:var(--button-background-color);
+    color: var(--button-font-color);
+    transition: .2s;
+}
+
+.button-color-primary:hover{
+    background-color: var(--button-hover-color);
+    color: var(--button-font-hover-color);
+}
+
+.button-color-primary:active{
+    background-color: var(--button-active-background-color) !important;
+    color: var(--button-font-hover-color) !important;
+}
+
+/* PRODUCT LINKS */
+
+.product-link{
+    text-decoration: none;
+}
+
+
+/* ICONS */
+.material-symbols-outlined{
+    font-family: 'Material Symbols Outlined';
+}
+
+.shopIcon{
+    color: var(--primary-color);
+    cursor:pointer;
+}
+
+.shopIcon:hover{
+    color: var(--primary-color-hover);
+}
+
+/* PAGE CLASS */
+
+.main{
+    background-color: var(--background-color-primary);
+}
+
+.main.home-page{
+    background-color: var(--background-color-secondary-transparent);
+}
+
+
+
+@media screen and (max-width: 250px) {
+    html{
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,19 @@
+.passwordContainer{
+    position: relative;
+}
+
+.passwordToggle{
+    position: absolute;
+    font-size: 1.5rem;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--icon-primary-color);
+    transition: .3s;
+}
+
+.passwordToggle:hover{
+    color: var(--icon-primary-color-hover);
+}
+

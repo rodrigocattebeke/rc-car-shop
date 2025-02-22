@@ -1,0 +1,29 @@
+.shopCart-quantity{
+    display: flex;
+    gap: .25rem;
+    width: 5rem;
+    height: 1.5rem;
+    margin-left: .5rem ;
+    border: 1px solid var(--secondary-color);
+    
+}
+
+.shopCart-quantity > button{
+    display: flex;
+    width: 1.5rem;
+    justify-content: center;    
+    align-items: center;
+    border: 0;
+    background-color: transparent;
+}
+
+.shopCart-quantity > input{
+    width: 1.5rem;
+    border: 0;
+    text-align: center;
+    text-decoration: none;
+}
+
+.shopCart-quantity > input:focus{
+    outline: none;
+}

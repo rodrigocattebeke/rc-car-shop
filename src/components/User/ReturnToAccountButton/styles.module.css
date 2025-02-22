@@ -1,0 +1,25 @@
+.returnButtonContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.returnButtonContainer a{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    line-height: 1;
+    gap: 6px;
+    text-decoration: none;
+    color: var(--font-primary-color);
+}
+
+.returnButtonContainer a:hover{
+    color: var(--font-page-color-hover);
+}
+
+.returnButtonContainer a > span{
+    font-size: 1.3rem;
+    line-height: 1;
+}

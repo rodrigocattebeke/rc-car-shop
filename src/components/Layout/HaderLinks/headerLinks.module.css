@@ -1,0 +1,72 @@
+.hamburguerButton:focus{
+box-shadow: 0 0 4px 1px var( --primary-color)  ;  
+}
+.offcanvas{
+    width: 350px !important;
+    transition: transform .5s ease-out, width .5s ease-out;
+    padding: .5rem 0;
+}
+
+.offcanvasCategories{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;  
+    margin: 0;
+}
+
+.offcanvasCategories li{
+    position: relative;
+    height: 2.5rem;
+    padding-left: 1.8rem;
+    transition: .1s;
+    cursor: pointer;
+}
+
+.offcanvasCategories li::after{
+    position: absolute;
+    content: "arrow_forward_ios";
+    font-family: "Material Symbols Outlined";
+    font-size: 1rem;
+    width: 20px;
+    height: min-content;
+    top: 50%;
+    right: .5rem;
+    transform: translateY(-50%);
+    color: var(--font-primary-color);
+}
+
+.offcanvasCategories li:hover{
+    background-color: var(--primary-color-transparent);
+}
+
+.offcanvasCategories li:hover::after{
+    color: var(--font-tertiary-color);
+
+}
+
+.offcanvasItem{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--font-color-primary);
+    transition: inherit;
+}
+
+.offcanvasItem:hover{
+    color: var(--font-tertiary-color);
+    
+}
+
+.navbarImg{
+    max-height: 70px;
+}
+
+@media screen and (max-width: 500px){
+    .offcanvas{
+        width: 100vw !important;
+    }
+}

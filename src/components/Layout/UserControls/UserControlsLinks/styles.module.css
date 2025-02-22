@@ -1,0 +1,24 @@
+.ulControls{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--background-color-primary);
+}
+
+.ulControls > li > a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--font-primary-color);
+    text-decoration: none;
+    transition: color .3s;
+}
+
+.ulControls > li > a:hover{
+    color: var(--font-page-color-hover);
+}

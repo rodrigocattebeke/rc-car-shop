@@ -1,0 +1,52 @@
+.cardContainer{
+    position: relative;
+    border:1px solid rgba(255, 255, 255, 0);
+    border-radius: 8px;
+    transition: .2s;
+}
+
+
+.cardContainer::after{
+    content: "task_alt";
+    font-family: "Material Symbols Outlined";
+    font-size: 0;
+    color: var(--font-page-color) ;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    transition: .15s;
+}
+
+.cardContainer.active{
+border:1px solid var(--font-page-color);
+border-radius: 8px;
+}
+
+.cardContainer.active::after{
+    content: "task_alt";
+    font-family: "Material Symbols Outlined";
+    font-size: 1.5rem;
+    color: var(--font-page-color) ;
+    position: absolute;
+    top: 12px;
+    right: 25px;
+}
+
+.directionCardsContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-content: space-evenly;
+    row-gap: 1.56rem;
+    column-gap: 1.56rem;
+    width: 100%;
+}
+
+@media screen and (max-width: 750px){
+    .directionCardsContainer{
+        grid-template-columns: 1fr;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    
+}

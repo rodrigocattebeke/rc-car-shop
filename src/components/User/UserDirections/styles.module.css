@@ -1,0 +1,19 @@
+
+.link{
+    color: var(--font-page-color);
+    text-decoration: none;
+    transition: .2s;
+}
+
+.link:hover{
+    color: var(--font-page-color-hover);
+}
+
+.title{
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--font-primary-color);
+    text-overflow: hidden;
+}
+

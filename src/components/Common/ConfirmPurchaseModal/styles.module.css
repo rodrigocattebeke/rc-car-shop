@@ -1,0 +1,47 @@
+.modalContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-color-secondary-transparent);
+    z-index: 999;
+    animation: openModal .13s ;
+}
+
+.modal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 23rem;
+    height: auto;
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: var(--background-color-primary);
+}
+
+.modal p{
+    font-size: 1.5rem;
+    font-weight: bold;
+    overflow-wrap: break-word;
+}
+
+.modal span{
+    font-size: 3rem;
+    color: var(--success-color);
+}
+
+@keyframes openModal {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

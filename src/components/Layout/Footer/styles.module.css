@@ -1,0 +1,20 @@
+.icon{
+    width: 1.88rem;
+}
+
+.iconContainer > a{
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    width: 100%;
+    margin: 15px 0;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.iconContainer p{
+    width: 5rem;
+    font-size: 1rem;
+    margin: 0;
+    color: var(--font-primary-color);
+}

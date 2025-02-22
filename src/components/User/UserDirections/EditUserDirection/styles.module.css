@@ -1,0 +1,8 @@
+
+.title{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    color: var(--font-primary-color);
+    text-overflow: hidden;
+}

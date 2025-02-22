@@ -1,0 +1,31 @@
+.linksContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 260px));
+    grid-auto-rows: min-content;
+    justify-content: space-around;
+    row-gap: 30px;
+}
+
+.linkContainer{
+    display: flex;
+    align-items: center;
+    padding: 1.2rem .2rem ;
+    border: 1px solid var(--secondary-color);
+    border-radius: 2px;
+}
+
+.linkContainer a{
+    display: flex;
+    text-decoration: none;
+    color: var(--font-primary-color);
+    transition: color .3s;
+    gap: 5px;
+}
+
+.linkContainer a:hover{
+    color: var(--font-page-color-hover);
+}
+
+.linkContainer p{
+    margin: 0;
+}

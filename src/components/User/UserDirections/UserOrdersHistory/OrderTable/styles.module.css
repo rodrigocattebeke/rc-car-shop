@@ -1,0 +1,72 @@
+.action span{
+    cursor: pointer;
+    transition: color .3s;
+}
+
+.action span:hover{
+    color: var(--font-page-color-hover)
+}
+
+.table{
+    border: 1px solid var(--secondary-color);
+}
+
+.table th, .table td{
+    color: var(--font-primary-color);
+    font-size: 1rem;
+}
+
+.table tbody{
+    width: 100%;
+}
+
+.table tbody tr{
+    width: 100%;
+    border: 1px solid var(--secondary-color);
+}
+
+@media screen and (max-width: 750px){
+    .table{
+        display: flex;
+        border: none;
+    } 
+    
+    .table td, .table th{
+        border: none;
+    }
+
+    .table thead th{
+        display: none;
+    }
+
+    .table tbody tr{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .td::before{
+        font-size: 1rem;
+        color: var(--font-primary-color);
+        font-weight: 600;
+    }
+
+    .productId::before{
+        content: "Pedido #: ";
+    }
+
+    .date::before{
+        content: "Fecha: ";
+    }
+
+    .total::before{
+        content: "Precio total: ";
+    }
+
+    .status::before{
+        content: "Estado: ";
+    }
+
+    .action::before{
+        content: "Acciones: ";
+    }
+}

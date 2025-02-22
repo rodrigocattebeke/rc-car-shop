@@ -1,0 +1,41 @@
+ .infoContainer{
+    margin-top: 1.5rem;
+ }
+ 
+ .methodCard{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    justify-content:space-around;
+    gap: 5px;
+    padding: .5rem;
+    border: 1px solid var(--secondary-color);
+    cursor: pointer;
+    filter:grayscale(1) opacity(.5);
+    transition: filter .3s;
+ }
+
+ .methodCard.active{
+    filter: none;
+ }
+
+ .methodCard img{
+    object-fit:contain;
+    width:3rem;
+    height: auto;
+ }
+
+ .methodCard p{
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1;
+ }
+
+.paymentMethodsContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 150px));
+    gap: 10px;
+} 
+

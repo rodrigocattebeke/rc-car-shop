@@ -1,0 +1,28 @@
+.countdownContainer{
+    display: flex;
+    width: min-content;
+    height: min-content;
+    padding: .4rem 1rem;
+    border-radius: 1rem;
+    background-color: rgb(255, 255, 255);
+    color: var(--font-primary-color);
+}
+
+.countdownContainer p{
+    width: min-content;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.timeContainer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 3rem;
+    height: min-content;
+}
+
+.timeName{
+    font-size: .9rem;
+}

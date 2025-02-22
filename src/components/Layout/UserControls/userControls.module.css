@@ -1,0 +1,116 @@
+
+.cartCounter{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 1.2rem;
+    height: 1.2rem;
+    right: 0;
+    top: -5px;
+    background-color: var(--background-color-tertiary);
+    margin: 0;
+    border-radius: 50%;
+    font-size: .8rem;
+    font-weight: bold;
+    color: var(--font-tertiary-color);
+    visibility: hidden;
+}
+
+.cartCounter.active{
+    visibility: visible;
+}
+
+.cartIconContainer{
+    display: flex;
+    position: relative;
+}
+
+.dropdownContainer{
+    position: absolute;
+    width: max-content;
+    top: 100%;
+    left: 50%;
+    visibility:hidden;
+    opacity: 0;
+    transition: .3s;
+    transform: translateX(-50%);
+    box-shadow: rgb(0, 0, 0) 0 0 9px -5px ;
+}
+
+.shopcartBodyItems{
+    height: 80%;
+}
+
+.shopcartBodyActions{
+    height: 20%;
+}
+
+.userControlsContainer{
+    position: relative;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.userControlPerson, .userControlCart{
+    font-size: 2.5rem;
+    color: var(--icon-primary-color);
+    transition: .2s;
+    text-decoration: none;
+}
+    
+.userControlPerson:hover, .userControlCart:hover{
+    cursor: pointer;
+    color: var(--icon-primary-color-hover)
+}
+
+.userLoginLinks{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 1.1;
+}
+
+.userLoginLinks li a{
+    font-size: 1rem;
+    line-height: 1.2;
+    text-decoration: none;
+    color: var(--font-primary-color);
+    cursor: pointer;
+    transition: color .3s;
+}
+
+.userLoginLinks  li a:hover{
+    color: var(--font-page-color-hover);
+}
+
+.userLogInName{
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--font-primary-color);
+}
+
+.userLogInName:hover{
+    color: var(--icon-primary-color-hover);
+}
+
+.userLogInNameContainer{
+    display: flex;
+    align-items:center;
+    width: min-content;
+    height: 2.5rem;
+    max-width: 80px;
+    text-wrap: wrap;
+    cursor: pointer;
+}
+
+.userLogInNameContainer:hover .dropdownContainer{
+    visibility: visible;
+    opacity: 1;
+}

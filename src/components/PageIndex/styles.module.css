@@ -1,0 +1,31 @@
+.section{
+    font-size: 1rem;
+    margin-right: .3rem;
+}
+
+.section::marker{
+    content: none;
+}
+
+.section > a{
+    text-decoration: none;
+
+}
+
+.indexContainer{
+    position: relative;
+    min-height: 2rem;
+    display: flex;
+    align-items: center;
+    background-color: var(--background-color-secondary-transparent);
+}
+
+.prevSection::after{
+    content: "chevron_right";
+    font-size: .9rem;
+    font-family: "Material Symbols Outlined";
+    line-height: 1;
+    margin-left: .3rem;
+    vertical-align: middle;
+
+}

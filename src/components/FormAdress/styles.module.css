@@ -1,0 +1,14 @@
+.formGroup label{
+    font-size: 1.2rem;
+    color: var(--font-primary-color);
+}
+
+.formGroup label::after{
+    content: "*";
+    color: rgb(255, 0, 0);
+    margin-left: 5px;
+}
+
+.formGroup:nth-child(1) label::after{
+    content: "";
+}

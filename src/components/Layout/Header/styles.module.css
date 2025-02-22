@@ -1,0 +1,11 @@
+.header{
+    position: sticky ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    transition: 1s;
+    background-color: var(--background-color-primary);
+    z-index: 999;
+}
