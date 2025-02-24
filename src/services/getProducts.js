@@ -1,5 +1,3 @@
-import { getDirectImgURL } from "../helpers/getDirectImgUrl";
-
 export const getProducts = async () => {
   try {
     const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${import.meta.env.VITE_GOOGLE_SHEET_ID}/values/products?key=${import.meta.env.VITE_GOOGLE_API_KEY}`);
@@ -21,11 +19,6 @@ export const getProducts = async () => {
         //Parse to integer the price | stock | id of the product
         if (props[i] == "price" || props[i] == "stock" || props[i] == "productId") {
           info = parseInt(info);
-        }
-
-        //tranform the google drive url to direct url
-        if (props[i] == "image") {
-          info = getDirectImgURL(info);
         }
 
         //Create the product object

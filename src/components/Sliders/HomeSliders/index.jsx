@@ -25,7 +25,7 @@ export const HomeSliders = () => {
               <img src={`${nuevosProductosImg}`} className={`${styles.sliderTitleImg}`} alt="Nuevos Productos" loading="lazy"></img>
               <p>Nuevos Productos</p>
             </div>
-            <ProductsSlider products={products.slice(5)} />
+            <ProductsSlider products={products} />
             <div className={`${styles.viewAllButtonContainer}`}>
               <Link to={`/category/electronics`}>
                 <button className="btn button-color-primary">
@@ -47,7 +47,7 @@ export const HomeSliders = () => {
                 Productos Con <span className={`${styles.sliderTitleBold}`}>Envío Gratis A Todo El País</span>
               </p>
             </div>
-            <ProductsSlider products={products.slice(7)} />
+            <ProductsSlider products={products} />
             <div className={`${styles.viewAllButtonContainer}`}>
               <Link to={`/category/electronics`}>
                 <button className="btn button-color-primary">
@@ -66,7 +66,7 @@ export const HomeSliders = () => {
             <div className={`${styles.sliderTitle}`}>
               <p>Ropa Moderna</p>
             </div>
-            <ProductsSlider products={products.slice(2)} />
+            <ProductsSlider products={products} />
             <div className={`${styles.viewAllButtonContainer}`}>
               <Link to={`/category/electronics`}>
                 <button className="btn button-color-primary">
@@ -85,7 +85,7 @@ export const HomeSliders = () => {
             <div className={`${styles.sliderTitle}`}>
               <p>Electronicos</p>
             </div>
-            <ProductsSlider products={products.slice(9)} />
+            <ProductsSlider products={products} />
             <div className={`${styles.viewAllButtonContainer}`}>
               <Link to={`/category/electronics`}>
                 <button className="btn button-color-primary">
