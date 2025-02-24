@@ -31,22 +31,22 @@ export const AppRoutes = () => {
             }
           />
           <Route path="/category/*" element={<ViewCategoryProductsPage />} />
-          <Route
+          {/* <Route
             path="/checkout"
             element={
-              <Suspense fallback={<Loader fullscreen="true" />}>
+              <Suspense fallback={<Loader fullscreen="true" />}>   checkout suspendido porque no hay contexto 
                 <CheckoutPage />
               </Suspense>
             }
-          />
-          <Route
+          /> */}
+          {/* <Route
             path="/login"
             element={
               <Suspense fallback={<Loader fullscreen="true" />}>
-                <UserLoginPage />
+                <UserLoginPage />  Login sacado, no se puede usar sin contexto
               </Suspense>
             }
-          />
+          /> */}
           <Route path="/products/*" element={<ProductViewPage />} />
           <Route
             path="/search"

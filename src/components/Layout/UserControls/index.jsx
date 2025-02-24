@@ -1,15 +1,15 @@
 import { ShopCartOffCanvas } from "../ShopCartOffCanvas";
 import { useContext } from "react";
 import { CartContext } from "../../../contexts/CartContext";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import styles from "./userControls.module.css";
-import { UserContext } from "../../../contexts/UserContext";
+// import { UserContext } from "../../../contexts/UserContext";
 import { UserControlsOffcanvas } from "./UserControlsOffCanvas";
-import { UserControlsLinks } from "./UserControlsLinks";
+// import { UserControlsLinks } from "./UserControlsLinks";
 
 export const UserControls = ({ responsiveClass = "" }) => {
   const { cartState } = useContext(CartContext);
-  const { user } = useContext(UserContext);
+  // const { user } = useContext(UserContext);
 
   return (
     <>
@@ -23,8 +23,9 @@ export const UserControls = ({ responsiveClass = "" }) => {
           <p className={`${styles.cartCounter} ${cartState.cartProducts.length > 0 ? `${styles.active}` : ""}`}>{cartState.cartProducts.length > 0 ? `${cartState.cartProducts.length}` : ""}</p>
         </div>
 
-        <div className="d-flex align-items-center">
-          {/* if user.isLogged is true, add a user logged controls, otherwise, add a link to login page */}
+        {/* Esta parte todavia no se usa porque no hay contexto de usuario */}
+        {/* <div className="d-flex align-items-center">
+           if user.isLogged is true, add a user logged controls, otherwise, add a link to login page 
           <Link
             {...(user.isLogged
               ? {
@@ -57,12 +58,18 @@ export const UserControls = ({ responsiveClass = "" }) => {
               </div>
             </div>
           )}
-        </div>
+        </div> */}
       </div>
       {/* use controls offcanvas */}
 
-      {user.isLogged && <UserControlsOffcanvas />}
+      {/* {user.isLogged && <UserControlsOffcanvas />} */}
       {/* User control shopcart (offcanvas) */}
+
+      {/*Este offcanvas es el normal que lleva al checkout*/}
+      {/* <ShopCartOffCanvas></ShopCartOffCanvas> */}
+
+      {/*Este offcanvas es el que usamos ahora, ya que no habrá checkout, llevará a whatsapp poniendo los pedidos en el mensaje*/}
+
       <ShopCartOffCanvas></ShopCartOffCanvas>
     </>
   );

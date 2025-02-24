@@ -1,19 +1,13 @@
 import { createContext, useEffect, useState } from "react";
-import { apiUrls } from "../config/apiUrls";
-import simpleFetch from "../helpers/simpleFetch";
+import { getProducts } from "../services/getProducts";
 
 // product object example
 // {
 //   "id": 1,
-//   "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-//   "price": 109.95,
-//   "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-//   "category": "men's clothing",
-//   "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-//   "rating": {
-//       "rate": 3.9,
-//       "count": 120
-//   }
+//   "title": "SPARCO TAPA LLANTA NAYORO ARO 14" BLACK / SILVER SPC1415BKGR",
+//   "price": 250000,
+//   "description": "Tapallanta",
+//   "image": "https://drive.google.com/imagen1",
 // }
 
 const ProductsContext = createContext();
@@ -26,19 +20,25 @@ export const ProductsProvider = ({ children }) => {
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState(null);
 
-  //Get products and sale products
+  const getCategories = (products) => {
+    const categories = products.map((product) => product.category);
+
+    return [...new Set(categories)];
+  };
+
+  //Get products, and set products and categories
   useEffect(() => {
-    const getProducts = async () => {
+    const getAll = async () => {
       setLoading(true);
       setError(null);
 
       try {
-        const [res, categoryRes] = await Promise.all([simpleFetch(apiUrls.products), simpleFetch(apiUrls.categories)]);
+        const response = await getProducts();
 
-        if (res.isSuccess && categoryRes.isSuccess) {
-          setProducts(res.data);
-          setCategories(categoryRes.data);
-          setSaleProducts(res.data);
+        if (response.isSuccess) {
+          setProducts(response.data);
+          setCategories(getCategories(response.data));
+          setSaleProducts([]);
           setIsSuccess(true);
         } else {
           throw new Error("Error durante la carga de productos");
@@ -52,10 +52,23 @@ export const ProductsProvider = ({ children }) => {
         setLoading(false);
       }
     };
-    getProducts();
+
+    getAll();
   }, []);
 
-  return <ProductsContext.Provider value={{ categories, error, isSuccess, loading, products, saleProducts }}>{children}</ProductsContext.Provider>;
+  const getByCategory = (category = "") => {
+    if (!products) return;
+    const categoryProducts = products.filter((product) => product.category == category);
+    return categoryProducts;
+  };
+
+  const getById = (productId) => {
+    if (!products) return;
+    const product = products.find((product) => product.id == productId);
+    return product;
+  };
+
+  return <ProductsContext.Provider value={{ categories, error, getById, getByCategory, isSuccess, loading, products, saleProducts }}>{children}</ProductsContext.Provider>;
 };
 
 export { ProductsContext };

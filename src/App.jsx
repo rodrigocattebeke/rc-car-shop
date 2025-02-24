@@ -17,22 +17,22 @@ function App() {
   const hideFooterLocations = ["/login"];
 
   return (
-    <UserProvider>
-      <UserDirectionsProvider>
-        <ProductsProvider>
-          <CartProvider>
-            <OffcanvasProvider>
-              <ScrollToTop /> {/* If the url is changed, scroll to top */}
-              {!hideHeaderLocations.includes(location.pathname) && <Header />}
-            </OffcanvasProvider>
-            <main className={`container-xxl p-0 main`}>
-              <AppRoutes />
-            </main>
-            {!hideFooterLocations.includes(location.pathname) && <Footer />}
-          </CartProvider>
-        </ProductsProvider>
-      </UserDirectionsProvider>
-    </UserProvider>
+    // <UserProvider> Por ahora no habrá usuarios
+    // <UserDirectionsProvider> Como no hay usuarios, no se guardaran las ubicaciones
+    <ProductsProvider>
+      <CartProvider>
+        <OffcanvasProvider>
+          <ScrollToTop /> {/* If the url is changed, scroll to top */}
+          {!hideHeaderLocations.includes(location.pathname) && <Header />}
+        </OffcanvasProvider>
+        <main className={`container-xxl p-0 main`}>
+          <AppRoutes />
+        </main>
+        {!hideFooterLocations.includes(location.pathname) && <Footer />}
+      </CartProvider>
+    </ProductsProvider>
+    // </UserDirectionsProvider>
+    // </UserProvider>
   );
 }
 

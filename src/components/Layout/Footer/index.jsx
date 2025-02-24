@@ -9,7 +9,7 @@ export const Footer = () => {
       <div className="container">
         <div className="row">
           <div className="col-12 col-sm-6 my-3">
-            <p>L&R Express</p>
+            <p>RC Car Shop</p>
             <p>Todos los derechos reservados</p>
           </div>
           <div className="col-12 col-sm-6 my-3">
@@ -19,7 +19,7 @@ export const Footer = () => {
             <ul>
               <li>
                 <div className={`${styles.iconContainer}`}>
-                  <a href="https://wa.me/+595984056668?txt=Hola%20vengo%20desde%20la%20web" target="_blank" rel="noopener">
+                  <a href="https://wa.me/+595984682068?txt=Hola%20vengo%20desde%20la%20web" target="_blank" rel="noopener">
                     <p>Whatsapp</p>
                     <img src={whatsappIcon} className={styles.icon} alt="Icono de WhatsApp"></img>
                   </a>
@@ -33,7 +33,7 @@ export const Footer = () => {
               </li> */}
               <li>
                 <div className={`${styles.iconContainer}`}>
-                  <a href="https://www.facebook.com/people/LyR-Express/100089478412612/" target="_blank" rel="noopener">
+                  <a href="https://www.facebook.com" target="_blank" rel="noopener">
                     <p>Facebook</p>
                     <img src={facebookIcon} className={styles.icon} alt="Icono de Facebook"></img>
                   </a>

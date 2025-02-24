@@ -8,9 +8,11 @@ import { ErrorScreen } from "../../Common/ErrorScreen";
 import { Link, useLocation } from "react-router-dom";
 import { apiUrls } from "../../../config/apiUrls";
 import { moneyFormat } from "../../../helpers/moneyFormat";
+import { ProductsContext } from "../../../contexts/ProductsContext";
 
 export const ViewProduct = () => {
   const { addProductToCart } = useContext(CartContext);
+  const { getById } = useContext(ProductsContext);
 
   const location = useLocation();
 
@@ -29,15 +31,14 @@ export const ViewProduct = () => {
 
   useEffect(() => {
     const productId = location.pathname.split("/products/")[1];
-    const productUrl = apiUrls.productDetails(productId);
     const getProduct = async () => {
       setProduct(null);
-      const result = await simpleFetch(productUrl);
-      setIsSuccess(result.isSuccess);
-      setProduct(result.data);
+      const result = getById(productId);
+      setIsSuccess(result ? true : false);
+      setProduct(result);
     };
     getProduct();
-  }, [location.pathname]);
+  }, [location.pathname, getById]);
 
   // VALIDATE PRODUCT
   if (!isSuccess) return <ErrorScreen />;
@@ -55,7 +56,7 @@ export const ViewProduct = () => {
         </div>
         <div className={`${styles.productInfoContainer} col-12 col-sm-6 mb-4`}>
           <div className={`${styles.productInfo}`}>
-            <p>Precio: Gs. {moneyFormat(product?.price * 7800)}</p>
+            <p>Precio: Gs. {moneyFormat(product.price)}</p>
             <div className={`${styles.productStock}`}>
               <p className="m-0">En Stock</p>
             </div>
@@ -74,11 +75,25 @@ export const ViewProduct = () => {
           </div>
         </div>
       </div>
-      <div className={`${styles.productSection2} mt-5`}>
-        <p>Descripción del producto</p>
-        <hr></hr>
+      <div className={`${styles.productSection2} mt-5 h-100`}>
+        <div className="text-center">
+          <p>Productos relacionados</p>
+        </div>
+
         <div className={`${styles.productDescription}`}>
-          <p>{product?.description}</p>
+          <p>Aca iria un carrusel de productos relacionados</p>
+          <br></br>
+          <br></br>
+
+          <br></br>
+
+          <br></br>
+
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
         </div>
       </div>
     </section>

@@ -37,7 +37,7 @@ export const ProductCartInfo = ({ product = {}, isModifyActive = true }) => {
             {product.title}
           </p>
         </Link>
-        <p className={`${styles.productPrice} small my-0`}>Gs. {moneyFormat(dolarToPYG(product.price))}</p>
+        <p className={`${styles.productPrice} small my-0`}>Gs. {moneyFormat(product.price)}</p>
         <div className="d-flex gap-1">
           <p className="my-0">Cantidad:</p>
           {isModifyActive ? <QuantitySelector initialQuantity={product.quantity} onQuantityChange={handleQuantity}></QuantitySelector> : <p className="m-0">{` ${product.quantity}`}</p>}
