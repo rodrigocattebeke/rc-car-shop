@@ -1,7 +1,7 @@
 .addCartContainer{
     display: flex;
     align-items: center;
-    height: 20%;
+    height: auto;
 }
 
 .addCartContainer > button{
@@ -16,10 +16,6 @@
     margin-right: .5rem;
 }
 
-.productDescription > p{
-    font-size:1rem ;
-}
-
 .productImgContainer{
     display: flex;
     justify-content: center;
@@ -32,7 +28,7 @@
 }
 
 .productInfo{
-    height: 80%;
+    height: auto;
 }
 
 .productInfo > p{
@@ -40,10 +36,17 @@
     font-size: 1.2rem;
 }
 
+.productInfoContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+    height: auto;
+}
 
 .productSection1{
     display: flex;
-    width: 100%;;
+    width: 100%;
+    height: auto;
 }
 
 .productSection2 > p{
@@ -53,9 +56,20 @@
 .productStock{
     width: fit-content;
     padding:.15rem .3rem;
-    background-color: var(--success-color);
     border-radius: .5rem;
     margin: .2rem 0;
+}
+
+.productStock.isInStock{
+    background-color: var(--success-color);
+}
+
+.productStock.lowStock{
+    background-color: var(--alert-color);
+}
+
+.productStock.outOfStock{
+    background-color: var(--danger-color);
 }
 
 .productStock p{
@@ -64,7 +78,20 @@
     font-weight: 500;
 }
 
+.similarProductsContainer .title{
+    font-size:1.4rem;
+    font-weight: 500;
+    margin-left: 1.5rem;
+}
+
+.titleContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 .titleContainer > h2{
+    margin-left: 1.5rem;
     margin-bottom: 0;
     font-size: 1.5rem;
 }

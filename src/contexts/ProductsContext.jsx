@@ -68,7 +68,14 @@ export const ProductsProvider = ({ children }) => {
     return product;
   };
 
-  return <ProductsContext.Provider value={{ categories, error, getById, getByCategory, isSuccess, loading, products, saleProducts }}>{children}</ProductsContext.Provider>;
+  const getByTags = (tags) => {
+    if (!products) return;
+    let similarProducts = products.filter((product) => product.tags.some((tag) => tags.includes(tag)));
+
+    return similarProducts;
+  };
+
+  return <ProductsContext.Provider value={{ categories, error, getById, getByCategory, getByTags, isSuccess, loading, products, saleProducts }}>{children}</ProductsContext.Provider>;
 };
 
 export { ProductsContext };

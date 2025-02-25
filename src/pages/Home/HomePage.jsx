@@ -5,7 +5,7 @@ import { HomeSliders } from "../../components/Sliders";
 export const HomePage = () => {
   return (
     <>
-      <ProductsSale />
+      {/* <ProductsSale /> */}
       <HomeSliders />
       {/* <HomeCatalogue /> No es necesario tener el catalogo abajo */}
     </>

@@ -21,6 +21,11 @@ export const getProducts = async () => {
           info = parseInt(info);
         }
 
+        //Transform the tags string to array
+        if (props[i] == "tags") {
+          info = info.split(",").map((tag) => tag.trim());
+        }
+
         //Create the product object
         productObject = {
           ...productObject,

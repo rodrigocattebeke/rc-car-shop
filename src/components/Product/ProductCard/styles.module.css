@@ -4,10 +4,12 @@
     max-width: 250px;
     height: 100%;
     min-height: 200px;
-    max-height: 300px;
+    max-height: 330px;
     border: 0;
-    padding: 0 5px 5px 5px;
+    border-radius: 5px;
+    padding: .5rem;
     transition: box-shadow .3s;
+    box-sizing: border-box;
 }
 
 .card:hover{
@@ -15,7 +17,7 @@
     box-shadow: 0 0 15px rgb(194, 194, 194);;
 }
 
-.card-body{
+.cardBody{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,12 +25,12 @@
     padding: 0 3%;
 }
 
-.card-body a{
+.cardBody a{
 
     text-decoration: none;
 }
 
-.card-body > button{
+.cardBody > button{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,11 +38,11 @@
     font-size: .8rem;
 }
 
-.card-body > button > span {
+.cardBody > button > span {
     font-size: 1.3rem;
 }
 
-.card-title{
+.cardTitle{
     text-align:justify;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -51,10 +53,10 @@
     color: var(--font-primary-color);
 }
 
-.card-img-container{
-    width: 100%;
+.cardImgContainer{
+    display: flex;
+    justify-content: center;
     height: 50%;
-
 }
 
 .cardImg{
@@ -63,9 +65,13 @@
     object-fit: contain;
 }
 
-.card-price{
+.cardPrice{
     font-weight: 700;
     font-size: 1.1rem;
     color: var(--font-price-color);
     margin:.4rem 0;
+}
+
+.container{
+    padding: 1rem;
 }

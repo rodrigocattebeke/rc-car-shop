@@ -43,6 +43,7 @@
 
     /* STATUS COLORS */
     --success-color: rgb(102, 153, 0);
+    --alert-color: rgb(201, 131, 0);
     --danger-color: rgb(222, 1, 1);
 }
 
