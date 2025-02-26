@@ -1,3 +1,5 @@
+import { VonixImg } from "../assets/img";
+
 export const getProducts = async () => {
   try {
     const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${import.meta.env.VITE_GOOGLE_SHEET_ID}/values/products?key=${import.meta.env.VITE_GOOGLE_API_KEY}`);
@@ -24,6 +26,10 @@ export const getProducts = async () => {
         //Transform the tags string to array
         if (props[i] == "tags") {
           info = info.split(",").map((tag) => tag.trim());
+        }
+
+        if (props[i] == "image") {
+          info = VonixImg;
         }
 
         //Create the product object

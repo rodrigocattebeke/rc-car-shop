@@ -20,8 +20,7 @@ export const ProductCard = ({ product = {} }) => {
       <div className={`${styles.card} card`} to={`/products/${product.id}`} data-id={product.id}>
         <div className={`${styles.cardImgContainer}`}>
           <Link to={`/products/${product.id}`}>
-            {/* <img src={product.image} className="cardImg" alt={product.title} loading="lazy" /> */}
-            <img src={"/src/assets/img/vonix.jpg"} className={`${styles.cardImg} cardImg`} alt={`${product.title}`} loading="lazy"></img>
+            <img src={product.image} className={`${styles.cardImg} cardImg`} alt={`${product.title}`} loading="lazy"></img>
           </Link>
         </div>
         <div className={`${styles.cardBody}`}>

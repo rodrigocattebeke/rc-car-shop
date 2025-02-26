@@ -78,8 +78,7 @@ export const ViewProduct = () => {
         <div className={`${styles.productSection1} row pt-4 border-top border-1`}>
           {/* Product Image */}
           <div className={`${styles.productImgContainer} col-12 col-sm-6 mb-4`}>
-            {/* <img src={product?.image} alt={`${product.title}`} loading="lazy"></img> */}
-            <img src={"/src/images/vonix.jpg"} alt={`${product.title}`} loading="lazy"></img>
+            <img src={product?.image} alt={`${product.title}`} loading="lazy"></img>
           </div>
 
           <div className={`${styles.productInfoContainer} m-0 col-12 col-sm-6 mb-4`}>
