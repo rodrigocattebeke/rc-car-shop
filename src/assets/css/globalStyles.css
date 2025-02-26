@@ -3,19 +3,20 @@
     --background-color-primary: rgb(255, 255, 255);
     --background-color-secondary: rgb(217, 217, 217);
     --background-color-secondary-transparent:  rgba(217, 217, 217, 0.445);
-    --background-color-tertiary: rgb(114, 114, 114);
+    --background-color-tertiary: rgb(0, 0, 0);
 
     /* BUTTONS COLORS */
-    --button-background-color: rgb(220, 0, 51);
+    --button-background-color: rgb(187, 0, 0);
     --button-font-color: rgb(255, 255, 255);
     --button-font-hover-color: rgb(255, 255, 255);
-    --button-hover-color: rgb(162, 0, 38);
+    --button-hover-color: rgb(134, 0, 0);
     --button-active-background-color: rgb(155, 0, 36);
 
     /* FONT COLORS */
     --font-primary-color: rgb(0, 0, 0);
     --font-secondary-color: rgb(120, 118, 118);
     --font-tertiary-color: rgb(255, 255, 255);
+    --font-tertiary-color-hover: rgb(149, 149, 149);
     --font-page-color: rgb(220, 0, 51);
     --font-page-color-hover: rgb(173, 1, 41);
     --font-price-color: rgb(0, 0, 0);
@@ -23,12 +24,13 @@
     /* ICONS COLORS */
     --icon-primary-color: rgb(0, 0, 0);
     --icon-primary-color-hover: rgb(123, 123, 123);
-
+    --icon-secondary-color: rgb(255, 255, 255);
+    --icon-secondary-color-hover: rgb(123, 123, 123);
 
     /* PRIMARY COLORS */
-    --primary-color: rgb(220, 0, 51);
-    --primary-color-transparent: rgba(220, 0, 51, 0.829);
-    --primary-color-hover: rgb(173, 1, 41);
+    --primary-color: rgb(187, 0, 0);
+    --primary-color-transparent: rgba(187, 0, 0, 0.829);
+    --primary-color-hover: rgb(134, 0, 0);
 
     /* SECONDARY COLORS */
     --secondary-color: rgb(171, 171, 171);

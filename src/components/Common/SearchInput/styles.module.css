@@ -31,7 +31,8 @@
 }
 
 .searchButton , .searchInput{
-    border: 2px solid var(--primary-color);
+    border: 2px solid var(--secondary-color);
+    background-color: var(--background-color-primary);
     border-radius: 50px;
 }
 

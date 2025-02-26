@@ -116,7 +116,9 @@ export const ViewProduct = () => {
         <div className={`${styles.title}`}>
           <p>Productos relacionados</p>
         </div>
-        <ProductsSlider products={getByTags(product.tags)} />
+        <div className="my-4">
+          <ProductsSlider products={getByTags(product.tags)} />
+        </div>
       </div>
     </>
   );

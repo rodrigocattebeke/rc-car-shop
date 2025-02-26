@@ -8,12 +8,12 @@
     height: 1.2rem;
     right: 0;
     top: -5px;
-    background-color: var(--background-color-tertiary);
+    background-color: var(--background-color-secondary);
     margin: 0;
     border-radius: 50%;
     font-size: .8rem;
     font-weight: bold;
-    color: var(--font-tertiary-color);
+    color: var(--font-primary-color);
     visibility: hidden;
 }
 
@@ -57,14 +57,14 @@
 
 .userControlPerson, .userControlCart{
     font-size: 2.5rem;
-    color: var(--icon-primary-color);
+    color: var(--icon-secondary-color);
     transition: .2s;
     text-decoration: none;
 }
     
 .userControlPerson:hover, .userControlCart:hover{
     cursor: pointer;
-    color: var(--icon-primary-color-hover)
+    color: var(--icon-secondary-color-hover)
 }
 
 .userLoginLinks{

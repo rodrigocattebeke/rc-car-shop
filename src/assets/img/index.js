@@ -1,4 +1,4 @@
-import logoSinFondoImg from "./logo-sin-fondo.webp";
+import logoSinFondoImg from "./logo.jpg";
 import deliveryGratisImg from "./delivery-gratis.webp";
 import cartCryImg from "./cart-cry.webp";
 import nuevosProductosImg from "./nuevos-productos.webp";

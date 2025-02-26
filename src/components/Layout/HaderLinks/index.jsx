@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
-import styles from "./headerLinks.module.css";
+import styles from "./styles.module.css";
 import { logoSinFondoImg } from "../../../assets/img";
 import { ProductsContext } from "../../../contexts/ProductsContext";
+import { menu } from "../../../assets/icons";
 
 export const HeaderLinks = ({ responsiveClass = "" }) => {
   const [categoriesArray, setCategoriesArray] = useState([]);
@@ -21,16 +22,16 @@ export const HeaderLinks = ({ responsiveClass = "" }) => {
       <section className={`navbar navbar-expand-md header-links-container py-0 ${responsiveClass}`}>
         <div className="container-fluid justify-content-md-evenly p-0">
           <div className="order-2 order-md-1  d-flex justify-content-center w-50">
-            <Link className="navbar-brand me-0" to="/">
+            <Link className={`${styles.navbarImgContainer} navbar-brand me-0`} to="/">
               <img src={logoSinFondoImg} className={`${styles.navbarImg}`} alt="LyR Express logo" />
             </Link>
           </div>
           <div className="order-1 w-50 d-md-none">
             <button className={`${styles.hamburguerButton} navbar-toggler`} type="button" data-bs-toggle="offcanvas" data-bs-target="#categoryOffcanvas" aria-controls="categoryOffcanvas">
-              <span className="navbar-toggler-icon"></span>
+              <span className="material-symbols-outlined">menu</span>
             </button>
           </div>
-          <div className="collapse nav-links-container d-none d-md-flex order-3 mt-3 mt-md-0 w-50" id="navbarNavDropdown">
+          <div className="collapse nav-links-container d-none d-md-flex justify-content-center order-3 mt-3 mt-md-0 w-50" id="navbarNavDropdown">
             <div className={`nav-link ${styles.categoriesDropdown}`} role="button" data-bs-toggle="offcanvas" data-bs-target="#categoryOffcanvas" aria-controls="categoryOffcanvas">
               Categorías
             </div>

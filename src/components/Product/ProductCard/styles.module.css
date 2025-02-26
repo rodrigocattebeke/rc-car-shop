@@ -4,7 +4,7 @@
     justify-content: space-between;
     width: 100%;
     min-width: 150px;
-    max-width: 210px;
+    max-width: 250px;
     height: 100%;
     min-height: 200px;
     max-height: 350px;
@@ -87,6 +87,9 @@
 }
 
 .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    padding: .7rem;
+    padding: .2rem;
 }

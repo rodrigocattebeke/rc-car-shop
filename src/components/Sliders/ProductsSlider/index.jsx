@@ -1,4 +1,5 @@
 import Slider from "react-slick";
+import "./slider.css";
 import { ProductCard } from "../../Product/ProductCard";
 
 export const ProductsSlider = ({ products = null }) => {
@@ -10,6 +11,7 @@ export const ProductsSlider = ({ products = null }) => {
     slidesToShow: 4,
     slidesToScroll: 4,
     initialSlide: 0,
+    arrows: true,
     responsive: [
       {
         breakpoint: 1024,
