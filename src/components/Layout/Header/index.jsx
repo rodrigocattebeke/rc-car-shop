@@ -11,7 +11,6 @@ export const Header = () => {
   const timeoutRef = useRef(null);
 
   const maxExpandHeaderHeight = 110; //110px is the max height of expand header. More than 110, it is in mobile view
-  const minExpandHeaderWidth = 768; //md breakpoint break in >768px, view in bootstrap docs.
 
   //move the header when scrolling for view only search bar
   useEffect(() => {

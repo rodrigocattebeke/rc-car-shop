@@ -10,22 +10,24 @@ export const ProductCard = ({ product = {} }) => {
 
   const handleButtonClick = (e, product) => {
     imgFlyAnimation(e);
-    addProductToCart(product);
+    setTimeout(() => {
+      addProductToCart(product);
+    }, 1000);
   };
 
   return (
     <div className={`${styles.container}`}>
-      <div className={`${styles.card}`} to={`/products/${product.id}`} data-id={product.id}>
+      <div className={`${styles.card} card`} to={`/products/${product.id}`} data-id={product.id}>
         <div className={`${styles.cardImgContainer}`}>
           <Link to={`/products/${product.id}`}>
             {/* <img src={product.image} className="cardImg" alt={product.title} loading="lazy" /> */}
-            <img src={"/src/images/vonix.jpg"} className={`${styles.cardImg}`} alt={`${product.title}`} loading="lazy"></img>
+            <img src={"/src/assets/img/vonix.jpg"} className={`${styles.cardImg} cardImg`} alt={`${product.title}`} loading="lazy"></img>
           </Link>
         </div>
         <div className={`${styles.cardBody}`}>
           <Link to={`/products/${product.id}`}>
             <h4 className={`${styles.cardTitle}`}>{product.title}</h4>
-            <p className={`${styles.cardPrice}`}>Gs. {moneyFormat(product.price)}</p>
+            <p className={`${styles.cardPrice}`}>{moneyFormat(product.price)}</p>
           </Link>
           <button className="btn button-color-primary" onClick={(e) => handleButtonClick(e, product)}>
             <span className={`material-symbols-outlined addToCartIcon`}>shopping_cart</span>

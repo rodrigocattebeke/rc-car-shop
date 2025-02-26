@@ -41,7 +41,7 @@ export const ShopCartOffCanvas = () => {
           <div className="shopcart-body-actions align-items-center d-flex flex-column h-25 gap-2 ">
             <div className={`${styles.totalPrice} d-flex justify-content-between w-100`}>
               <p>Total:</p>
-              <p>Gs. {moneyFormat(getTotalPrice())}</p>
+              <p>{moneyFormat(getTotalPrice())}</p>
             </div>
             <Link to="/checkout" className="btn btn-success" onClick={(e) => closeOffcanvas(e)}>
               Finalizar pedido

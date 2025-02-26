@@ -5,5 +5,5 @@ export const moneyFormat = (number = 0) => {
     style: "decimal",
     minimumFractionDigits: 0,
   }).format(number);
-  return formattedNumber;
+  return `Gs. ${formattedNumber}`;
 };
