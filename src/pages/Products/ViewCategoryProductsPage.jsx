@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import { CategoryProducts } from "../../components/CategoryProducts";
+import { CategoryProductsList } from "../../components/CategoryProductsList";
 import { useContext, useEffect, useState } from "react";
 import { Loader } from "../../components/Common/Loader";
 import { ErrorScreen } from "../../components/Common/ErrorScreen";
@@ -61,7 +61,7 @@ export const ViewCategoryProductsPage = () => {
                 </div>
               </div>
             )}
-            <CategoryProducts products={filteredProducts} />
+            <CategoryProductsList products={filteredProducts} />
           </div>
         </>
       )}

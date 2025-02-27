@@ -17,14 +17,14 @@ export const ProductCard = ({ product = {} }) => {
 
   return (
     <div className={`${styles.container}`}>
-      <div className={`${styles.card} card`} to={`/products/${product.id}`} data-id={product.id}>
+      <div className={`${styles.card} card`} to={`/products/${encodeURIComponent(product.title)}`} data-id={encodeURIComponent(product.title)}>
         <div className={`${styles.cardImgContainer}`}>
-          <Link to={`/products/${product.id}`}>
+          <Link to={`/products/${encodeURIComponent(product.title)}`}>
             <img src={product.image} className={`${styles.cardImg} cardImg`} alt={`${product.title}`} loading="lazy"></img>
           </Link>
         </div>
         <div className={`${styles.cardBody}`}>
-          <Link to={`/products/${product.id}`}>
+          <Link to={`/products/${encodeURIComponent(product.title)}`}>
             <h4 className={`${styles.cardTitle}`}>{product.title}</h4>
             <p className={`${styles.cardPrice}`}>{moneyFormat(product.price)}</p>
           </Link>

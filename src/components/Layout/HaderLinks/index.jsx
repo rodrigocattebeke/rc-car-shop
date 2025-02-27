@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import styles from "./styles.module.css";
-import { logoSinFondoImg } from "../../../assets/img";
+import { logoImg } from "../../../assets/img";
 import { ProductsContext } from "../../../contexts/ProductsContext";
 import { menu } from "../../../assets/icons";
 
@@ -23,7 +23,7 @@ export const HeaderLinks = ({ responsiveClass = "" }) => {
         <div className="container-fluid justify-content-md-evenly p-0">
           <div className="order-2 order-md-1  d-flex justify-content-center w-50">
             <Link className={`${styles.navbarImgContainer} navbar-brand me-0`} to="/">
-              <img src={logoSinFondoImg} className={`${styles.navbarImg}`} alt="LyR Express logo" />
+              <img src={logoImg} className={`${styles.navbarImg}`} alt="LyR Express logo" />
             </Link>
           </div>
           <div className="order-1 w-50 d-md-none">

@@ -68,6 +68,12 @@ export const ProductsProvider = ({ children }) => {
     return product;
   };
 
+  const getByName = (productName) => {
+    if (!products) return;
+    const product = products.find((product) => product.title == productName);
+    return product;
+  };
+
   const getByTags = (tags) => {
     if (!products) return;
     let similarProducts = products.filter((product) => product.tags.some((tag) => tags.includes(tag)));
@@ -75,7 +81,7 @@ export const ProductsProvider = ({ children }) => {
     return similarProducts;
   };
 
-  return <ProductsContext.Provider value={{ categories, error, getById, getByCategory, getByTags, isSuccess, loading, products, saleProducts }}>{children}</ProductsContext.Provider>;
+  return <ProductsContext.Provider value={{ categories, error, getById, getByCategory, getByName, getByTags, isSuccess, loading, products, saleProducts }}>{children}</ProductsContext.Provider>;
 };
 
 export { ProductsContext };

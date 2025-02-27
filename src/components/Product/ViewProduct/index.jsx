@@ -11,7 +11,7 @@ import { ProductsSlider } from "../../Sliders";
 
 export const ViewProduct = () => {
   const { addProductToCart } = useContext(CartContext);
-  const { products, getById, getByTags } = useContext(ProductsContext);
+  const { products, getByName, getByTags } = useContext(ProductsContext);
 
   const location = useLocation();
 
@@ -32,15 +32,16 @@ export const ViewProduct = () => {
 
   //Get product by the id in url
   useEffect(() => {
-    const productId = location.pathname.split("/products/")[1];
+    const productName = decodeURIComponent(location.pathname.split("/products/")[1]);
+
     const getProduct = async () => {
       setProduct(null);
-      const result = getById(productId);
+      const result = getByName(productName);
       setIsSuccess(result ? true : false);
       setProduct(result);
     };
     getProduct();
-  }, [location.pathname, getById]);
+  }, [location.pathname, getByName]);
 
   //Verify stock and set the stock class
   useEffect(() => {

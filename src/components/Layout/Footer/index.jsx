@@ -26,7 +26,7 @@ export const Footer = () => {
       </div>
       <div className={`${styles.direction} container`}>
         <p className={`${styles.title}`}>Cómo encontrarnos</p>
-        <div className={`${styles.mapContainer}`}>
+        <div className={`d-flex justifycontent-center justify-content-sm-start`}>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d721.6163252913609!2d-57.55205053047245!3d-24.98917418305422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945d9bd7d9be4e35%3A0x5d2b0112f451bf50!2sLAVADERO%20CATTE!5e1!3m2!1ses!2spy!4v1740605271480!5m2!1ses!2spy" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>

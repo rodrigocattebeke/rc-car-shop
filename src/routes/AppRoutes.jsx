@@ -52,7 +52,7 @@ export const AppRoutes = () => {
             path="/search"
             element={
               <Suspense fallback={<Loader fullscreen="true" />}>
-                <SearchPage />{" "}
+                <SearchPage />
               </Suspense>
             }
           />

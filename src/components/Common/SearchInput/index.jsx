@@ -2,6 +2,7 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { ProductsContext } from "../../../contexts/ProductsContext";
 import styles from "./styles.module.css";
 import { SearchResult } from "./SearchResult";
+import { useNavigate } from "react-router-dom";
 
 const SearchInput = ({ responsiveClass = "" }) => {
   const { products } = useContext(ProductsContext);
@@ -12,6 +13,8 @@ const SearchInput = ({ responsiveClass = "" }) => {
   const timeoutRef = useRef(null);
   const [inputData, setInputData] = useState("");
 
+  const navigate = useNavigate();
+
   //search input handle to get the product write
   const handleOnChange = (e) => {
     setInputData(e.target.value);
@@ -20,10 +23,12 @@ const SearchInput = ({ responsiveClass = "" }) => {
   //send to search page
   const handleFormSearch = (e) => {
     e.preventDefault();
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
     const valueEncoded = encodeURIComponent(inputData);
-    location.href = `/search?sv=${valueEncoded}`;
+    navigate(`/search?sv=${valueEncoded}`);
   };
 
+  //If the user clicked outside the search results, close search modal
   const handleMouseDown = (e) => {
     //detect if clicked outside of search results
     if (formRef.current && !formRef.current.contains(e.target) && productsContainerRef.current && !productsContainerRef.current.contains(e.target)) {
@@ -32,12 +37,14 @@ const SearchInput = ({ responsiveClass = "" }) => {
     }
   };
 
-  //IF product are clicked, remove search product result and overlay
+  //If product are clicked, remove search product result and overlay
   const handleProductSelected = () => {
     setIsFocused(false);
     setSearchResult(null);
     setInputData("");
   };
+
+  //Add a timeout to wait a while until writing is finished
 
   useEffect(() => {
     if (!inputData) {
@@ -68,11 +75,10 @@ const SearchInput = ({ responsiveClass = "" }) => {
       <div className={`${responsiveClass} search-container position-relative d-flex justify-content-center `}>
         <form className={` container input-group`} ref={formRef} onSubmit={handleFormSearch}>
           <input type="text" name="searchInput" className={`${styles.searchInput} form-control`} placeholder="Buscar producto" aria-label="search" aria-describedby="search-button" value={inputData} onChange={handleOnChange} />
-          <button name="searchButton" className={`${styles.searchButton} btn`} type="button" id="search-button" onClick={handleFormSearch}>
+          <button name="searchButton" className={`${styles.searchButton} btn`} type="button" id="search-button">
             <span className="material-symbols-outlined">search</span>
           </button>
         </form>
-
         {/* Search results */}
         <div className={`${styles.productsContainer}`} ref={productsContainerRef}>
           {/* check searchResult, if it's null, don't render products, otherwise, render */}

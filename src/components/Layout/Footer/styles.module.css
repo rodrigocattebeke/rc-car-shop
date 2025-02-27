@@ -10,6 +10,13 @@
     color: var(--font-tertiary-color);
 }
 
+.direction iframe{
+    width: 100%;
+    max-width: 500px;
+    height: 250px;
+    border-radius: 3px;
+}
+
 .footer{
     background-color: var(--background-color-tertiary);
 }
@@ -18,24 +25,6 @@
     color: var(--font-tertiary-color);
 }
 
-.mapContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.mapContainer{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.mapContainer > iframe{
-    width: 100%;
-    max-width: 500px;
-    height: 250px;
-    border-radius: 3px;
-}
 
 .title{
     font-size: 1.4rem;
