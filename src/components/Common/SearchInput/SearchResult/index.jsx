@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export const SearchResult = ({ product = null }) => {
   return (
     <div className={`container-fluid`}>
-      <Link to={`/products/${product?.id}`} className="text-decoration-none">
+      <Link to={`/products/${encodeURIComponent(product.title)}`} className="text-decoration-none">
         <div className="row">
           <div className="img-container col-2 p-0 pe-1 ">
             <img src={product?.image} className={`img-fluid`} alt={`${product.title}`} loading="lazy"></img>

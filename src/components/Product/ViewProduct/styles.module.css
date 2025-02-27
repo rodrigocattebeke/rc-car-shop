@@ -41,6 +41,7 @@
     flex-direction: column;
     justify-content: space-between;    
     height: auto;
+    gap: 2rem;
 }
 
 .productSection1{
