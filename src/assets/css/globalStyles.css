@@ -15,6 +15,7 @@
     /* FONT COLORS */
     --font-primary-color: rgb(0, 0, 0);
     --font-secondary-color: rgb(120, 118, 118);
+    --font-secondary-color-hover: rgb(237, 237, 237);
     --font-tertiary-color: rgb(255, 255, 255);
     --font-tertiary-color-hover: rgb(149, 149, 149);
     --font-page-color: rgb(220, 0, 51);

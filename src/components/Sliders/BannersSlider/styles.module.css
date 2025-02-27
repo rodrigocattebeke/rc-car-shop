@@ -1,0 +1,27 @@
+.img{
+    width: 100%;
+    object-fit:contain;
+}
+
+.arrow{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--font-secondary-color);
+    top: 50%;
+    right: .7rem;
+    transform: translateY(-50%);
+    transition: .3s;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.arrow:hover{
+    color: var(--font-secondary-color-hover);
+}
+
+.arrowPrev{
+    left: .7rem;
+    right: auto;
+}

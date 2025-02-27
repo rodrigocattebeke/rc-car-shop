@@ -19,7 +19,7 @@ export const HomeSliders = () => {
     <div className="container-fluid ">
       <div className="row row-gap-5 my-5">
         {/* first slider */}
-        <div className="col-12 col-lg-6">
+        <div className="col-12">
           <div className="container d-flex flex-column justify-content-around" style={{ minHeight: "550px" }}>
             <div className={`${styles.sliderTitle}`}>
               <img src={`${nuevosProductosImg}`} className={`${styles.sliderTitleImg}`} alt="Nuevos Productos" loading="lazy"></img>
@@ -39,7 +39,7 @@ export const HomeSliders = () => {
 
         {/* // slider */}
 
-        <div className="col-12 col-lg-6">
+        <div className="col-12">
           <div className="container d-flex flex-column justify-content-around" style={{ minHeight: "550px" }}>
             <div className={`${styles.sliderTitle}`}>
               <img src={`${deliveryGratisImg}`} className={`${styles.sliderTitleImg}`} alt="Productos con delivery gratis" loading="lazy"></img>
@@ -61,7 +61,7 @@ export const HomeSliders = () => {
 
         {/* // slider */}
 
-        <div className="col-12 col-lg-6">
+        <div className="col-12">
           <div className="container d-flex flex-column justify-content-around" style={{ minHeight: "550px" }}>
             <div className={`${styles.sliderTitle}`}>
               <p>Ropa Moderna</p>
@@ -80,7 +80,7 @@ export const HomeSliders = () => {
 
         {/* // slider */}
 
-        <div className="col-12 col-lg-6">
+        <div className="col-12">
           <div className="container d-flex flex-column justify-content-around" style={{ minHeight: "550px" }}>
             <div className={`${styles.sliderTitle}`}>
               <p>Electronicos</p>
