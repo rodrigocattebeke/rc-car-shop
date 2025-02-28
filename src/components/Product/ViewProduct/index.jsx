@@ -66,8 +66,7 @@ export const ViewProduct = () => {
   useEffect(() => {
     if (!product) return;
     let firstPart = encodeURIComponent("Hola! Estoy interesado en estos productos:");
-    let secondPart = encodeURIComponent(`*Producto:* ${product.title}
-        \n*Cantidad:* ${productQuantity}
+    let secondPart = encodeURIComponent(`\n*Producto:* ${product.title}\n*Cantidad:* ${productQuantity}
         `);
     setWhatsappMessage(firstPart + secondPart);
   }, [product, productQuantity]);
