@@ -1,20 +1,25 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ProductCartInfo } from "../../Product/ProductCartInfo";
 import { CartContext } from "../../../contexts/CartContext";
-import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
 import { moneyFormat } from "../../../helpers/moneyFormat";
-import { dolarToPYG } from "../../../helpers/dolarToPYG";
 import { OffcanvasContext } from "../../../contexts/OffcanvasContext";
 import { cartCryImg } from "../../../assets/img";
-
-const closeOffcanvas = (e) => {
-  e.target.closest(".offcanvas").querySelector(".offcanvas-header").querySelector(".btn-close").click();
-};
 
 export const ShopCartOffCanvas = () => {
   const { cartState, getTotalPrice } = useContext(CartContext);
   const { isOffcanvasVisible } = useContext(OffcanvasContext);
+  const [whatsappMessage, setWhatsappMessage] = useState("");
+
+  //Generate the whatsapp link message
+  useEffect(() => {
+    if (!cartState.cartProducts) return;
+    const allMessages = cartState.cartProducts.map((product) => `\n*Producto:* ${product.title}\n*Cantidad:* ${product.quantity}\n*Precio Unitario:* ${product.price}`).join("\n");
+
+    let firstPart = encodeURIComponent("Hola! Estoy interesado en estos productos:");
+    let secondPart = encodeURIComponent(allMessages);
+    setWhatsappMessage(firstPart + secondPart);
+  }, [cartState]);
 
   return (
     <div className={`${styles.offCanvas} offcanvas offcanvas-end shopcart-menu ${isOffcanvasVisible ? "" : "d-none"}`} tabIndex="-1" id="shopcartOffCanvas" aria-labelledby="shopcartOffCanvasLabel">
@@ -43,9 +48,9 @@ export const ShopCartOffCanvas = () => {
               <p>Total:</p>
               <p>{moneyFormat(getTotalPrice())}</p>
             </div>
-            <Link to="/checkout" className="btn btn-success" onClick={(e) => closeOffcanvas(e)}>
-              Finalizar pedido
-            </Link>
+            <a href={`https://wa.me/595984682068?text=${whatsappMessage}`} rel="noopener noreferrer" target="_blank">
+              <button className="btn btn-success"> Finalizar pedido por whatsapp</button>
+            </a>
           </div>
         )}
       </div>
