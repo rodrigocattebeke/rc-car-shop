@@ -32,7 +32,7 @@ export const ProductCartInfo = ({ product = {}, isModifyActive = true }) => {
         <img src={product.image} alt={product.title} className={`${styles.productImg}`}></img>
       </div>
       <div className="col-8">
-        <Link to={`/products/${product.id}`} className="product-link">
+        <Link to={`/products/${product.title}`} className="product-link">
           <p className={styles.productTitle} onClick={closeOffcanvas}>
             {product.title}
           </p>

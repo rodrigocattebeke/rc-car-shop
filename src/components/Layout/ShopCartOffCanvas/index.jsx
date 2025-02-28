@@ -14,7 +14,7 @@ export const ShopCartOffCanvas = () => {
   //Generate the whatsapp link message
   useEffect(() => {
     if (!cartState.cartProducts) return;
-    const allMessages = cartState.cartProducts.map((product) => `\n*Producto:* ${product.title}\n*Cantidad:* ${product.quantity}\n*Precio Unitario:* ${product.price}`).join("\n");
+    const allMessages = cartState.cartProducts.map((product) => `\n*Producto:* ${product.title}\n*Cantidad:* ${product.quantity}\n*Precio Unitario:* ${moneyFormat(product.price)}`).join("\n");
 
     let firstPart = encodeURIComponent("Hola! Estoy interesado en estos productos:");
     let secondPart = encodeURIComponent(allMessages);
