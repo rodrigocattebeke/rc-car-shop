@@ -9,6 +9,8 @@
     --button-background-color: rgb(187, 0, 0);
     --button-font-color: rgb(255, 255, 255);
     --button-font-hover-color: rgb(255, 255, 255);
+    --button-font-color-secondary: rgb(0, 0, 0);
+    --button-font-color-secondary-hover: rgb(255, 255, 255);
     --button-hover-color: rgb(134, 0, 0);
     --button-active-background-color: rgb(155, 0, 36);
 

@@ -79,6 +79,24 @@
     font-weight: 500;
 }
 
+.shopInWhatsappButton{
+    width: 100%;
+    max-width: 16rem;
+    height: 2.5rem;
+    margin: .6rem 0;
+    border-radius: 5px;
+    color: var(--button-font-color-secondary);
+    font-weight: 500;
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    transition: .2s;
+}
+
+.shopInWhatsappButton:hover{
+    background-color: var(--button-background-color);
+    color: var(--button-font-color-secondary-hover);
+}
+
 .similarProductsContainer .title{
     font-size:1.4rem;
     font-weight: 500;

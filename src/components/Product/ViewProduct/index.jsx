@@ -11,7 +11,7 @@ import { ProductsSlider } from "../../Sliders";
 
 export const ViewProduct = () => {
   const { addProductToCart } = useContext(CartContext);
-  const { products, getByName, getByTags } = useContext(ProductsContext);
+  const { getByName, getByTags } = useContext(ProductsContext);
 
   const location = useLocation();
 
@@ -21,6 +21,8 @@ export const ViewProduct = () => {
   const [stockMessage, setStockMessage] = useState("");
   const [showQuantityMessage, setShowQuantityMessage] = useState(false);
   const [product, setProduct] = useState(null);
+  const [whatsappMessage, setWhatsappMessage] = useState("");
+
   const handleQuantity = (quantity) => {
     setProductQuantity(quantity);
   };
@@ -59,6 +61,16 @@ export const ViewProduct = () => {
       return setStockClass(styles.outOfStock);
     }
   }, [product, setStockClass]);
+
+  //Generate the whatsapp link message
+  useEffect(() => {
+    if (!product) return;
+    let firstPart = encodeURIComponent("Hola! Estoy interesado en estos productos:");
+    let secondPart = encodeURIComponent(`*Producto:* ${product.title}
+        \n*Cantidad:* ${productQuantity}
+        `);
+    setWhatsappMessage(firstPart + secondPart);
+  }, [product, productQuantity]);
 
   // VALIDATE PRODUCT
   if (!isSuccess) return <ErrorScreen />;
@@ -103,6 +115,13 @@ export const ViewProduct = () => {
                   <span className="material-symbols-outlined">add_shopping_cart</span> Comprar
                 </button>
               </div>
+
+              <div>
+                <a href={`https://wa.me/595984682068?text=${whatsappMessage}`} rel="noopener noreferrer" target="_blank">
+                  <button className={`${styles.shopInWhatsappButton}`}>Pedir por WhatsApp</button>
+                </a>
+              </div>
+
               <small>
                 Categoría:{" "}
                 <Link to={`/category/${product?.category}`} className="product-link">
