@@ -43,8 +43,8 @@
 
     /* LOADER COLORS */
     --loader-color-1: rgb(220, 0, 51);
-    --loader-color-2: rgb(147, 64, 84);
-    --loader-color-3: rgb(159, 137, 142);
+    --loader-color-2: rgb(90, 51, 60);
+    --loader-color-3: rgb(0, 0, 0);
 
     /* STATUS COLORS */
     --success-color: rgb(102, 153, 0);
